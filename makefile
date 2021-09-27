@@ -1,7 +1,7 @@
-all: main.c euler.c
-	gcc -o euler main.c euler.c
+all: main.o euler.o
+	gcc -o euler main.o euler.o
 
-main.o: euler.c euler.h
+main.o: main.c euler.c euler.h
 	gcc -c main.c
 
 euler.o: euler.c
